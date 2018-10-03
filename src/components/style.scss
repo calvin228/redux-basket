@@ -1,0 +1,64 @@
+$add: #4cd137;
+$remove: #e74c3c;
+
+main {
+  font-size: 16px;
+  .col-sm {
+    margin: 5% 10%;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    h3 {
+      font-weight: bold;
+      font-size: x-large;
+    }
+    .trash-can {
+      color: #e78277;
+      &:hover {
+        color: red;
+        cursor: pointer;
+      }
+    }
+  }
+
+  ul {
+    text-align: start;
+    .line-through {
+      text-decoration: line-through;
+      &:hover{
+        text-decoration: line-through;
+      }
+    }
+
+    li {
+      &:nth-child(odd) {
+        background: #fefefe;
+      }
+      &:nth-child(even) {
+        background: #f8f8f8;
+      }
+      span {
+        color: grey;
+        margin-right: 10px;
+      }
+    }
+    .grocery {
+      &:hover {
+        span {
+          color: $add;
+          cursor: pointer;
+        }
+      }
+    }
+    .basket {
+      &:hover {
+        span {
+          color: $remove;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

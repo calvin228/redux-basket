@@ -1,18 +1,25 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Basket from "./components/Basket";
+import Groceries from "./components/Groceries";
+import "./App.css";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <FontAwesomeIcon icon="shopping-basket" size="6x" />
+          <h1 className="App-title">Basket App</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <main>
+          <div className="container">
+            <div className="row">
+              <Groceries />
+              <Basket />
+            </div>
+          </div>
+        </main>
       </div>
     );
   }
